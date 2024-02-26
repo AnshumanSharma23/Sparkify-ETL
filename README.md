@@ -32,7 +32,7 @@ In order to replicate this project, follow the below mentioned steps.
 3. create a redshift cluster, attach the role that we created in the redshift cluster.
 4. Create a dwh.config file in the directory with the following structure
 
-//you can get the host from the AWS redshift cluster.
+
 <pre>
 
 
