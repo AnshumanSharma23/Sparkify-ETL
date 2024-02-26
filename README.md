@@ -98,5 +98,22 @@ time - timestamps of records in songplays broken down into specific units
 
 start_time, hour, day, week, month, year, weekday
 
+## Create tables and insert data
+To execute the ETL on an existing cluster from the command line, run the following:
+
+<pre>
+  
+python3 create_tables.py
+python3 etl.py
+  
+</pre>
+
+
+## Query Example
+
+Once you've created the database and run the ETL pipeline, you can test out queries, see example in the exploration.ipynb file
+
+
+
 
 
