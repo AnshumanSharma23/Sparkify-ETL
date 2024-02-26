@@ -4,7 +4,7 @@ import configparser
 # CONFIG
 config = configparser.ConfigParser()
 config.read("dwh.cfg")
-ARN = config.get("IAM_ROLE", "ARN")
+
 
 # DROP TABLES
 
@@ -120,7 +120,7 @@ staging_events_copy = ("""
     format as json {}
 """).format(
     config.get("S3", "LOG_DATA"),
-    ARN,
+    config.get("IAM_ROLE", "ARN"),
     config.get("S3", "LOG_JSONPATH")
 )
 
@@ -129,7 +129,7 @@ staging_songs_copy = ("""
     iam_role '{}'
     json 'auto'
 """).format(config.get("S3", "SONG_DATA"), 
-ARN)
+config.get("IAM_ROLE", "ARN") )
 
 # FINAL TABLES
 
