@@ -58,7 +58,7 @@ SONG_DATA='s3://udacity-dend/song_data'
 ## Schema for Song Play Analysis
 Using the song and event datasets, we'll need to create a star schema optimized for queries on song play analysis. This includes the following tables.
 
-#### Fact Table
+### Fact Table
 
 songplays - records in event data associated with song plays i.e. records with page NextSong
 
@@ -73,7 +73,7 @@ location,
 user_agent
 
 
-#### Dimension Tables
+### Dimension Tables
 
 users - users in the app
 
